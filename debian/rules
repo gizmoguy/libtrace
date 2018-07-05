@@ -15,14 +15,14 @@ override_dh_auto_configure:
 	test -d _debian || mkdir _debian
 	cd _debian && ( \
 		test -e Makefile || \
-		./configure $(CONFFLAGS) \
+		../configure $(CONFFLAGS) \
 			   --prefix=/usr \
 			   --mandir=\$${prefix}/share/man \
 			   --infodir=\$${prefix}/share/info)
 	test -d _dpdk || mkdir _dpdk
 	cd _dpdk && ( \
 		test -e Makefile || \
-		./configure $(CONFFLAGS) \
+		../configure $(CONFFLAGS) \
 			   --with-dpdk \
 			   --prefix=/usr \
 			   --mandir=\$${prefix}/share/man \
